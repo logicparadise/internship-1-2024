@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+    <h1>Example Form with Various Input Types</h1>
+    <form action="/submit" method="get">
+        <!-- Text input -->
+        <label for="text-input">Text Input:</label>
+        <input type="text" id="text-input" name="first-name"><br><br>
+
+        <!-- Password input -->
+        <label for="password-input">Password Input:</label>
+        <input type="password" id="password-input" name="password-input"><br><br>
+
+        <!-- Email input -->
+        <label for="email-input">Email Input:</label>
+        <input type="email" id="email-input" name="email-input"><br><br>
+
+        <!-- Number input -->
+        <label for="number-input">Number Input:</label>
+        <input type="number" id="number-input" name="number-input" min="0" max="100"><br><br>
+
+        <!-- URL input -->
+        <label for="url-input">URL Input:</label>
+        <input type="url" id="url-input" name="url-input"><br><br>
+
+        <!-- Telephone input -->
+        <label for="tel-input">Telephone Input:</label>
+        <input type="tel" id="tel-input" name="tel-input"><br><br>
+
+        <!-- Date input -->
+        <label for="date-input">Date Input:</label>
+        <input type="date" id="date-input" name="date-input"><br><br>
+
+        <!-- Time input -->
+        <label for="time-input">Time Input:</label>
+        <input type="time" id="time-input" name="time-input"><br><br>
+
+        <!-- Color input -->
+        <label for="color-input">Color Input:</label>
+        <input type="color" id="color-input" name="color-input"><br><br>
+
+        <!-- Range input -->
+        <label for="range-input">Range Input:</label>
+        <input type="range" id="range-input" name="range-input" min="0" max="100"><br><br>
+
+        <!-- File input -->
+        <label for="file-input">File Input:</label>
+        <input type="file" id="file-input" name="file-input"><br><br>
+
+        <!-- Radio buttons -->
+        <fieldset>
+            <legend>Gender:</legend>
+            <label for="radio1">Male</label>
+            <input type="radio" id="radio1" name="gender" value="male"><br>
+            <label for="radio2">Female</label>
+            <input type="radio" id="radio2" name="gender" value="female"><br>
+            <label for="radio3">Don't want to tell</label>
+            <input type="radio" id="radio3" name="gender" value="N/A"><br>
+        </fieldset><br>
+
+        <!-- Checkboxes -->
+        <fieldset>
+            <legend>Checkboxes:</legend>
+            <label for="checkbox1">Checkbox 1</label>
+            <input type="checkbox" id="checkbox1" name="checkbox-group" value="checkbox1"><br>
+            <label for="checkbox2">Checkbox 2</label>
+            <input type="checkbox" id="checkbox2" name="checkbox-group" value="checkbox2"><br>
+        </fieldset><br>
+
+        <!-- Dropdown list -->
+        <label for="dropdown">Dropdown List:</label>
+        <select id="dropdown" name="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3" selected>Option 3</option>
+        </select><br><br>
+
+        <!-- Textarea -->
+        <label for="textarea">Textarea:</label>
+        <textarea id="textarea" name="textarea" rows="1" cols="10"></textarea><br><br>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
