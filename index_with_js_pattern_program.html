@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage again</title>
+    <!-- <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> -->
+    <script>
+        let row = 1;
+
+        let col = 1;
+        for (; row <= 6; row++) {
+            for (col = 1; col <= 6; col++) {
+                if (row == 1) {
+                    if (col == 1) {
+
+                        document.writeln("*");
+                    }
+                } else if (row == 2) {
+                    if (col <= 2) {
+
+                        document.writeln("*");
+                    }
+                } else if (row == 3) {
+                    if (col <= 3) {
+
+                        document.writeln("*");
+                    }
+                } else if (row == 4) {
+                    if (col <= 4) {
+
+                        document.writeln("*");
+                    }
+                } else if (row == 5) {
+                    if (col <= 5) {
+
+                        document.writeln("*");
+                    }
+                } else {
+
+                    document.writeln("*");
+                }
+            }
+
+            document.writeln("<br/>");
+        }
+        document.write("--- END FIRST PART --- <br/>")
+    </script>
+    <script>
+        let row2 = 1;
+
+        let col2 = 1;
+        for (; row2 <= 7; row2++) {
+            for (col2 = 1; col2 <= row2; col2++) {
+                document.writeln(`*`)
+            }
+            document.writeln(`<br/>`);
+        }
+        document.writeln(`${row2} - ${col2}`);
+    </script>
+</head>
+
+<body>
+<h1>Some programming practice</h1>
+<h2>Assignment: Try to draw the following pattern using JS yourself.</h2>
+******<br/>
+****<br/>
+***<br/>
+**<br/>
+*<br/>
+</body>
+
+</html>
