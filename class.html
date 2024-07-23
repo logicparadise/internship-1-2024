@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style>
+    section div p {
+        margin: 50px;
+        color: aqua;
+    }
+
+    section h1 {
+        font-size: 50px;
+    }
+
+    p {
+        background-color: orange;
+        padding: 30px;
+        font-size: 30px;
+    }
+    section > div > p > span {
+        background-color: red;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+</head>
+
+<body>
+    <section>
+        <span>
+
+            <h1>Section 1</h1>
+        </span>
+
+        <span>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est animi possimus vero mollitia voluptate eum,
+                maxime
+                delectus iure cum fuga quas aliquam, sed illum? Ex, quod consequuntur. Mollitia, deserunt eos.
+            </p>
+
+        </span>
+    </section>
+    <section>
+        <div>
+            <h1>Section 2</h1>
+        </div>
+        <div>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est animi possimus vero mollitia voluptate eum,
+                maxime
+                <span>direct</span>
+                 iure cum fuga quas aliquam, sed illum? Ex, quod consequuntur. Mollitia, deserunt eos.
+            </p>
+        </div>
+    </section>
+
+
+    <section>
+        <h1>Section 2</h1>
+        <div>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est animi possimus vero mollitia voluptate eum,
+                maxime
+                delectus iure cum fuga quas aliquam, sed illum? Ex, quod consequuntur. Mollitia, deserunt eos.
+                <div>
+                    <span>Indirect</span>
+                </div>
+            </p>
+        </div>
+    </section>
+</body>
+
+
+</html>
