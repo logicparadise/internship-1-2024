@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML - HTML table as an example</title>
+    <!-- <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> -->
+
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Operator</th>
+                <th>Multiplier</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="multiplication_result">
+
+        </tbody>
+    </table>
+    <script>
+
+        let number = 12;
+        let maxMultiplier = 16;
+        for (let multiplier = 1; multiplier <= maxMultiplier; multiplier++) {
+            let row = `<tr>
+            <td>${number}</td>
+            <td>x</td>
+            <td>${multiplier}</td>
+            <td>${number * multiplier}</td>
+        </tr>`;
+            let existingHTML = document.getElementById("multiplication_result").innerHTML;
+            document.getElementById("multiplication_result").innerHTML = existingHTML + row;
+        }
+    </script>
+</body>
+
+</html>
