@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form Validation</title>
+
+</head>
+
+<body>
+    <center>
+        <h1>Basic Form Validation</h1>
+        <form>
+            <input type="text" name="name" /> <br />
+            <span id="validationResult" style="font-size: 10px;"></span>
+            <br /> <br />
+            <input type="button" value="Validate" onclick="validate()">
+        </form>
+    </center>
+    <script>
+        const showUserError = (message) => {
+            document.getElementById("validationResult").innerText = message;
+            document.getElementById("validationResult").style.color = "red"
+        }
+        const hasAllowedCharsOnly = (stringInput) => {
+
+            let allowedChars = "qazwsxedcrfv ";
+            const allCharsEnteredByUser = stringInput.split("");
+            for (let char of allCharsEnteredByUser) {
+                if (allowedChars.indexOf(char) == -1) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        const validate = () => {
+            let inputValue = document.getElementsByName("name")[0].value
+            if (inputValue.split(" ").length > 4) {
+                showUserError("Your response is invalid")
+                return;
+            }
+            if (!hasAllowedCharsOnly(inputValue)) {
+                showUserError("some characters from your input are not allowed")
+                return;
+            }
+            showSuccessMessage("Great, Your response is valid");
+        }
+
+        const showSuccessMessage = (message) => {
+            document.getElementById("validationResult").innerText = message;
+            document.getElementById("validationResult").style.color = "green"
+        }
+    </script>
+</body>
+
+</html>
