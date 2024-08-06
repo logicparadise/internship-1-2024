@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chart with Chart.js</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+    }
+
+    .chart-container {
+        width: 80%;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 60px;
+    }
+    h1 {
+        text-align: center;
+        padding: 20px;
+    }
+</style>
+
+<body>
+
+    <div class="chart-container">
+        <h1>Bar Chart</h1>
+        <canvas id="barchart"></canvas>
+    </div>
+    <div class="chart-container">
+        <h1>Pie Chart</h1>
+        <canvas id="myPieChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <h1>Doughnut Chart</h1>
+        <canvas id="doughnut"></canvas>
+    </div>
+    <div class="chart-container">
+        <h1>Area Chart</h1>
+        <canvas id="myAreaChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h1>Combination Chart</h1>
+        <canvas id="myCombinationChart"></canvas>
+    </div>
+</body>
+
+</html>
