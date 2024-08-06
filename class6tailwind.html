@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .carousel-inner {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <!-- Carousel -->
+        <div class="carousel mt-8 overflow-hidden">
+            <div class="carousel-inner flex ">
+                <div class="carousel-item bg-blue-500 text-white flex items-center justify-center h-96">Slide 1</div>
+                <div class="carousel-item bg-green-500 text-white flex items-center justify-center h-96">Slide 2</div>
+                <div class="carousel-item bg-red-500 text-white flex items-center justify-center h-96">Slide 3</div>
+                <div class="carousel-item bg-pink-500 text-white flex items-center justify-center h-96">Slide 4</div>
+                <div class="carousel-item bg-orange-500 text-white flex items-center justify-center h-96">Slide 5</div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <div class="flex justify-between mt-4">
+            <button id="prev" class="px-4 py-2 bg-gray-800 text-white rounded">Previous</button>
+            <button id="next" class="px-4 py-2 bg-gray-800 text-white rounded">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        const carouselInner = document.querySelector('.carousel-inner');
+        let index = 0;
+
+        function showSlide(i) {
+            index = (i + 5) % 5; // 5 is the number of slides
+            carouselInner.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', () => showSlide(index + 1));
+    </script>
+</body>
+
+</html>
